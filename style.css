@@ -1,0 +1,464 @@
+:root {
+  --primary-color: #a600ff;
+  --secondary-color: #f4e8fae1;
+  --bgc-input: #dedfde;
+  --text-pri: #ffffff;
+  --text-sec: #000000;
+  --shadow: #747070;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  min-width: 300px;
+}
+button {
+  width: fit-content;
+  height: fit-content;
+  display: inline;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin: auto;
+  border-radius: 5rem;
+  border: none;
+  background-color: var(--secondary-color);
+  border-right: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-pri);
+  border: none;
+  box-shadow: 0 4px 8px var(--shadow);
+  border-left: 2px solid var(--text-pri);
+  border-top: 2px solid var(--text-pri);
+}
+#loginPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  gap: 1rem;
+  background-color: var(--primary-color);
+}
+#loginWrapper {
+  display: flex;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  max-width: 23rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin: auto;
+  gap: 1rem;
+  background-color: var(--text-pri);
+  border-radius: 1.5rem;
+  border: 2px solid var(--text-sec);
+  box-shadow: 4px 4px 18px var(--text-pri);
+}
+#loginPage #loginWrapper > input:hover {
+  box-shadow: 0 0 8px 1px #989898;
+  background-color: #ffffff;
+}
+#loginPage #loginWrapper > input {
+  border: 2px solid var(--text-sec);
+  background-color: #dedfde;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  width: 95%;
+  cursor: pointer;
+  max-width: 18rem;
+}
+
+#loginPage #loginWrapper > button:hover {
+  box-shadow: 0 0 8px var(--primary-color);
+  border: 1.3px solid var(--text-sec);
+}
+#loginPage #loginWrapper > button {
+  background-color: #e8c8f9;
+  border-radius: 12px;
+  padding: 0.3rem 1.2rem;
+  cursor: pointer;
+  height: 2rem;
+  color: var(--text-sec);
+  margin: 0.5rem auto;
+  border: 1.3px solid transparent;
+}
+
+#navbar {
+  display: flex;
+  height: 3rem;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-pri);
+  font-weight: bold;
+}
+
+#navbar div {
+  cursor: pointer;
+}
+#navbar div:hover {
+  color: var(--text-sec);
+}
+#descriptionWrapper {
+  margin-top: 3rem;
+  font-family: "Averia Serif Libre";
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+#descriptionWrapper #userName {
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+#descriptionWrapper .callToAction {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  margin: 1rem auto;
+  box-shadow: 0 0 8px var(--shadow);
+  border-radius: 1rem;
+  max-width: 450px;
+}
+#descriptionWrapper .callToAction .callToActionBtn:hover {
+  color: var(--text-sec);
+}
+#descriptionWrapper .callToAction .callToActionBtn {
+  background-color: var(--text-pri);
+  margin: 1rem auto;
+}
+#descriptionWrapper .descHeadingDesc {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px var(--shadow);
+  margin: 1rem auto;
+  max-width: 700px;
+}
+.features {
+  background-color: rgba(239, 214, 255, 0.772);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px var(--shadow);
+  margin: 1rem auto;
+  max-width: 700px;
+}
+.features .featTitle {
+  margin: 1rem auto;
+  font-weight: bolder;
+}
+.features p {
+  background-color: var(--text-pri);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px var(--shadow);
+  margin: 1rem auto;
+  max-width: 700px;
+}
+.howItWorks {
+  background-color: rgba(239, 214, 255, 0.772);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px var(--shadow);
+  margin: 1rem auto;
+  max-width: 700px;
+}
+.howItWorks .howItWorksDesc {
+  margin: 1rem auto;
+  font-weight: bolder;
+  background-color: var(--text-pri);
+}
+.howItWorks h4 {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px var(--shadow);
+  margin: 1rem auto;
+  max-width: 700px;
+}
+.faq {
+  background-color: rgba(217, 178, 242, 0.772);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px var(--shadow);
+  margin: 1rem auto;
+  max-width: 700px;
+}
+
+.faq .faqs {
+  background-color: var(--text-pri);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px var(--shadow);
+  margin: 1rem auto;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+#dataCollectionPage {
+  display: none;
+  justify-content: center;
+  min-height: calc(100vh - 4rem);
+  margin: 4rem 24px 0;
+}
+#personalInfomation,
+#education,
+#skills,
+#summary {
+  border-top: 4px solid var(--primary-color);
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 0 12px var(--shadow);
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  gap: 1rem;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 30rem;
+  overflow: auto;
+  margin-bottom: 5rem;
+}
+
+#personalInfomation > p,
+#education > p,
+#skills > p,
+#summary > p {
+  color: var(--shadow);
+}
+#personalInfomation > div,
+#education > div,
+#skills > div,
+#summary > div {
+  display: flex;
+  flex-direction: column;
+}
+#personalInfomation div button,
+#education div button,
+#skills div button,
+#summary div button {
+  width: fit-content;
+  height: fit-content;
+  display: inline;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5rem;
+  border: none;
+  background-color: var(--secondary-color);
+  border-right: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+#personalInfomation div button:hover,
+#education div button:hover,
+#skills div button:hover,
+#summary div button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-pri);
+  border: none;
+  box-shadow: 0 4px 8px var(--shadow);
+  border-left: 2px solid var(--text-pri);
+  border-top: 2px solid var(--text-pri);
+}
+
+#personalInfomation #btnWrapper,
+#education #btnWrapper,
+#skills #btnWrapper,
+#summary #btnWrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#personalInfomation > div > input,
+#education > div > input,
+#skills > div > input,
+#summary > div > textarea {
+  border: 1px solid gainsboro;
+  height: 2rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: auto;
+  cursor: pointer;
+  caret-color: var(--primary-color);
+  margin-top: 0.25rem;
+  padding: 4px 0.5rem;
+}
+#afterPI,
+#afterEducation,
+#afterSkills,
+#afterAddSec {
+  padding: 2rem;
+  box-shadow: 0 0 8px var(--shadow);
+  height: fit-content;
+  width: 90%;
+  display: none;
+  max-width: 30rem;
+  border-radius: 4px;
+}
+#afterPI ul,
+#afterEducation ul,
+#afterSkills ul,
+#afterAddSec ul {
+  margin-top: 2rem;
+  background-color: #efebf1;
+  padding: 1rem 0 1rem 2rem;
+  border-radius: 8px;
+  list-style: "✒️  ";
+}
+#afterPI ul li,
+#afterEducation ul li,
+#afterSkills ul li,
+#afterAddSec ul li {
+  margin: 1rem 8px;
+}
+
+#afterPI #btnWrapper,
+#afterEducation #btnWrapper,
+#afterSkills #btnWrapper,
+#afterAddSec #btnWrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#additionalSections {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+#additionalSections > div {
+  min-width: 120px;
+  height: 2rem;
+  margin: 0.5rem;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--text-sec);
+  box-shadow: 0 0 8px var(--shadow);
+}
+#forLanguages,
+#forInterest,
+#forCertifications {
+  display: none;
+  width: 98vw;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 30rem;
+  align-items: center;
+  height: fit-content;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px var(--shadow);
+}
+#forLanguages input,
+#forInterest input,
+#forCertifications input {
+  border: 1px solid gainsboro;
+  height: 2rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: auto;
+  cursor: pointer;
+  caret-color: var(--primary-color);
+  margin-top: 0.25rem;
+  padding: 4px 0.5rem;
+  margin-bottom: 2rem;
+}
+#previewWrapper {
+  display: none;
+  height: 11in;
+  width: 8.27in;
+  border: 2px solid black;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 4rem 3rem 0rem 3rem;
+  justify-content: start;
+  gap: 1rem;
+  align-items: start;
+  flex-direction: column;
+}
+
+#prvName {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+@media print {
+  #navbar {
+    display: none;
+  }
+  button {
+    display: none;
+  }
+  #previewWrapper {
+    padding-bottom: 0;
+  }
+  ul li {
+    margin-left: 2rem;
+  }
+}
+
+.alert {
+  padding: 5rem 1rem;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 40rem;
+  position: fixed;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.952);
+  color: var(--text-pri);
+  border-radius: 12px;
+  font-size: x-large;
+  font-weight: bold;
+}
+.cancle {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px var(--primary-color);
+  cursor: pointer;
+}
+.br-1 {
+  border-radius: 1rem;
+}
+.confirm {
+  background-color: var(--primary-color);
+}

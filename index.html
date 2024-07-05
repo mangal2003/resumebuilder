@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="dataCollectionWrapper">
+        <div id="loginPage">
+            <section id="loginWrapper">
+                <p style="text-align: center;">Hey! Welcome to Resume Builder 👏🏻</p>
+                <h2 style="text-transform: uppercase;">Login/Signup</h2> <br>
+                <input id="nameForLogin" type="text" placeholder="Name *">
+                <input id="emailForLogin" type="email" placeholder="Email *">
+                <button onclick="makeUserLogin()">Login</button>
+            </section>
+        </div>
+        <div id="descriptionPage">
+            <div id="navbar">
+                <div class="logo">Resume Builder</div>
+                <div id="logoutBtn" onclick="asklogoutUser()">Logout</div>
+            </div>
+            <div id="descriptionWrapper">
+                <h1 style="margin: 1rem;">
+                    Hey <span id="userName">User</span>
+                </h1>
+                <div class="callToAction">
+                    <h3>Ready to Build Your Perfect Resume?</h3>
+                    <button class="callToActionBtn" onclick="startBuilding()">
+                        Get Started Now
+                    </button>
+                </div>
+                <h2 class="descHeading">
+                    Elevate Your Career with a Stunning Resume.!
+                </h2>
+                <p class="descHeadingDesc">
+                    Craft a professional resume that stands out from the crowd with our
+                    easy-to-use resume building app. Start your journey to success today!
+                </p>
+
+                <div class="features">
+                    <h2>Offerings</h2>
+                    <hr>
+                    <h3 class="featTitle">Customize Your Resume Anytime, Anywhere</h3>
+                    <p class="featTitleDesc">
+                        Your resume is a living document, and the app makes it easy to update
+                        and personalize it whenever you need. Add new skills, tweak your
+                        experiences, or adjust the layout on-the-go, ensuring your resume
+                        always reflects your current qualifications
+                    </p>
+                    <h3 class="featTitle">
+                        Download Your Resume in Multiple Formats
+                    </h3>
+                    <p class="featTitleDesc">
+                        Once you've perfected your resume, download it in the format of your
+                        choice. The app supports various file types, making it simple to share
+                        your resume with employers, upload it to job portals, or print it out
+                        for interviews
+                    </p>
+                </div>
+                <div class="howItWorks">
+                    <h2>How It Works</h2>
+                    <hr>
+
+                    <h4 class="howItWorksDesc">
+                        Customize your resume by adding your personal information, work
+                        experience, and skills.
+                    </h4>
+                    <h4 class="howItWorksDesc">Preview your resume to ensure it looks perfect.</h4>
+
+
+                    <h4 class="howItWorksDesc">
+                        Download your resume in your preferred format and start applying for
+                        jobs!
+                    </h4>
+                </div>
+                <div class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <hr>
+
+                    <details class="faqs">
+                        <summary>How do I download my resume?</summary> <br />
+                        After customizing your resume, you can download it by clicking the
+                        "Download" button and selecting your preferred format.
+                    </details>
+                    <details class="faqs">
+                        <summary>Can I edit my resume after downloading?</summary> <br />
+                        Yes, you can always return to the app, make changes, and download
+                        the updated version of your resume.
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div id="dataCollectionPage">
+            <div id="personalInfomation">
+                <h2>Personal Details </h2>
+                <p>Get started with the basics: your name and contact information.</p>
+                <hr>
+                <div><span>Name : </span><input type="text" id="resumeName">
+                </div>
+                <div><span>Job Title :</span> <input type="text" id="resumeJobTitle">
+                </div>
+                <div><span>Address :</span> <input type="text" id="resumeAddress">
+                </div>
+                <div><span>Phone :</span> <input type="text" id="resumePhone">
+                </div>
+                <div><span>Email Address :</span> <input type="text" id="resumeMail">
+                </div>
+                <div id="btnWrapper">
+                    <button onclick="location.reload()">Back</button>
+                    <button onclick="savePersonalInfo()">Next</button>
+                </div>
+            </div>
+            <div id="afterPI">
+                <h2>🎉 Great job! Up next, your educational milestones</h2>
+                <ul>
+                    <li>Feature degrees, certifications or licenses, and training related to your industry</li>
+                    <li>Recent graduates: highlight academic projects, awards, and coursework.</li>
+                </ul>
+                <div id="btnWrapper">
+                    <button onclick="backPersonalInfo()">Back</button>
+                    <button onclick="askEducation()">Next</button>
+                </div>
+            </div>
+            <div id="education">
+                <h2>Education</h2>
+                <p>Add your latest and most relevant education, including programs you're currently enrolled in
+                    (currently supporting only one).</p>
+                <hr>
+                <div><span>Institute Name : </span><input type="text" id="instituteName">
+                </div>
+                <div><span>Institute Location :</span> <input type="text" id="instituteLocation">
+                </div>
+                <div><span>Start Date :</span> <input type="date" id="startDate">
+                </div>
+                <div><span>End Date :</span> <input type="date" id="endDate">
+                </div>
+                <div><span>Degree :</span> <input type="text" id="degree">
+                </div>
+                <div><span>Field of Study :</span> <input type="text" id="fieldOfStudy">
+                </div>
+                <div id="btnWrapper">
+                    <button onclick="backPI()">Back</button>
+                    <button onclick="saveEducation()">Next</button>
+                </div>
+            </div>
+            <div id="afterEducation">
+                <h2>🎉 Excellent progress! Now, let's highlight your key skills</h2>
+                <ul>
+                    <li>Incorporate keywords from job descriptions so employers and applicant tracking systems can scan
+                        your resume</li>
+                    <li>Highlight a mix of hard skills like programming and soft skills like team management</li>
+                </ul>
+                <div id="btnWrapper">
+                    <button onclick="backEducation()">Back</button>
+                    <button onclick="askSkills()">Next</button>
+                </div>
+            </div>
+            <div id="skills">
+                <h2>Key Skills</h2>
+                <p>Add relevant professional key skills and proficiencies.</p>
+                <hr>
+                <div><span>Skills : </span><input type="text" id="resumeSkill" placeholder="Ex: Skill1 Skill2 ">
+                </div>
+                <div id="btnWrapper">
+                    <button onclick="backAfterEducation()">Back</button>
+                    <button onclick="saveSkills()">Next</button>
+                </div>
+            </div>
+            <div id="afterSkills">
+                <h2>Add Additional Section</h2>
+                <hr>
+                <div id="additionalSections">
+                    <div id="languages" onclick="showLanguage()"> Languages</div>
+                    <div id="certifications" onclick="showCertification()"> Certifications</div>
+                    <div id="interests" onclick="showInterest()"> Interests</div>
+                </div>
+                <div id="btnWrapper">
+                    <button onclick="backSkills()">Back</button>
+                    <button onclick="saveAdditionalSec()">Next </button>
+                </div>
+            </div>
+            <div id="forLanguages">
+                <div><span>Language : </span><input type="text" placeholder="Ex: Hindi English other"
+                        id="resumeLanguage">
+                </div>
+                <div id="btnWrapper">
+                    <button onclick="backAddSec(1)">Back</button>
+                    <button onclick="languageSave()">Next </button>
+                </div>
+            </div>
+            <div id="forInterest">
+                <div><span>Interest : </span>
+                    <input type="text" id="resumeInterest" placeholder="Ex: reading-books writing"></input>
+                </div>
+                <div id="btnWrapper">
+                    <button onclick="backAddSec(3)">Back</button>
+                    <button onclick="interestSave()">Next </button>
+                </div>
+            </div>
+            <div id="forCertifications">
+                <div><span>Certification : </span>
+                    <input id="resumeCertification" placeholder="Enter name of Certificate"></input>
+                </div>
+                <div id="btnWrapper">
+                    <button onclick="backAddSec(2)">Back</button>
+                    <button onclick="certificateSave()">Next </button>
+                </div>
+            </div>
+            <div id="afterAddSec">
+                <h2>🎉 Almost done! Let's bring it all together with your summary.</h2>
+                <ul>
+                    <li>Provide a concise, high-level overview of your professional achievements and strengths</li>
+                    <li>Highlight your job title, experience, and key skills</li>
+                </ul>
+                <div id="btnWrapper">
+                    <button onclick="backAfterSkill()">Back</button>
+                    <button onclick="askSummary()">Next</button>
+                </div>
+            </div>
+            <div id="summary">
+                <h2>Summary</h2>
+                <p>Summarize your work experience, education and skills here</p>
+                <hr>
+                <div><span>Summary : </span><textarea style="max-width: 28rem;" id="resumeSummary" cols="45"
+                        rows="10"></textarea></div>
+                <div id="btnWrapper">
+                    <button onclick="backAfterAddSec()">Back</button>
+                    <button onclick="saveSummary()">Preview</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="previewWrapper">
+        <div id="topSec" class="mb-2">
+            <div id="prvName">
+                <h1 id="rbnamehere" class="mb-2">Name here</h1>
+                <h4 id="rbjthere">Job Title here</h4>
+                <span id="rbaddhere">Address here</span>
+                <div id="emailphone">
+                    📧 <span id="rbemlhere">email here</span> <br>
+                    📞 <span id="rbphnhere">phone here</span>
+                </div>
+            </div>
+            <div id="rbsummhere">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus temporibus quam
+                laboriosam laborum soluta? Est nostrum in voluptatum sequi officiis et, animi quaerat eligendi non.
+            </div>
+        </div>
+
+        <div id="secEducationprv" class="mb-2">
+            <h2>Education</h2>
+            <hr>
+            <span><strong><span id="degreePrv">degree</span></strong> in <span id="fosprv">field of study</span>
+                <strong> <span id="startdateprv">xx-xx-xxxx</span></strong> - <strong> <span
+                        id="enddateprv">xx-xx-xxxx</span></strong></span>
+            <br>
+            <span><strong><span id="insnameprv">institute name</span></strong> at <span id="inslocation">institute
+                    location</span></span>
+        </div>
+
+        <div id="secSkills" class="mb-2">
+            <h2>Key Skills</h2>
+            <hr>
+            <div id="skillset">
+                <!-- append the skills -->
+            </div>
+        </div>
+        <div id="secCertification" class="mb-2">
+            <h2>Certification</h2>
+            <hr>
+            <div id="rbcerthere">
+                certifications
+            </div>
+        </div>
+        <div id="secLanguages" class="mb-2">
+            <h2>Languages</h2>
+            <hr>
+            <div id="languageset">
+                <!-- append the languages -->
+            </div>
+        </div>
+        <div id="secInterest">
+            <h2>Interests</h2>
+            <hr>
+            <div id="rbintsthere">
+                <!-- append the interests -->
+            </div>
+        </div>
+        <button onclick="window.print()">Download</button>
+        <button onclick="location.reload()">Cancle</button>
+    </div>
+    <!-- warning and confirmations here -->
+    <div id="nameemailwarn" class="alert" style="display: none;">
+        <div class="cancle" onclick="removeAlert(1)">❌</div>
+        <span> Name and Email required..!</span>
+        <br>
+        <img src="errorimg.jpg" class="br-1" alt="error" width="300" height="300">
+    </div>
+    <div id="piwarning" class="alert" style="display: none;">
+        <div class="cancle" onclick="removeAlert(2)">❌</div>
+        <span> All fields are required</span>
+        <br>
+        <img src="errorimg.jpg" class="br-1" alt="error" width="300" height="300">
+    </div>
+    <div id="skillwarning" class="alert" style="display: none;">
+        <div class="cancle" onclick="removeAlert(3)">❌</div>
+        <span> Add atleast one skill..!</span>
+        <br>
+        <img src="plzimg.png" class="br-1" alt="error" width="300" height="300">
+    </div>
+    <div id="summarywarning" class="alert" style="display: none;">
+        <div class="cancle" onclick="removeAlert(4)">❌</div>
+        <span>Summary is required..!</span>
+        <br>
+        <img src="plzz.jpg" class="br-1" alt="error" width="300" height="300">
+    </div>
+    <div id="logoutconfrm" class="alert confirm" style="display: none;">
+        <span>Are you sure you want to logout?🥺🥺</span> <br>
+        <img src="conf.jpg" alt="Don't leave us" class="mb-2 br-1">
+        <div id="btnWrapper">
+            <button onclick="logoutUser(1)">Yes</button>
+            <button onclick="logoutUser(0)">No</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
